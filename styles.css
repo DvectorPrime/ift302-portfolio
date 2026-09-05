@@ -1,0 +1,292 @@
+*,
+*:before,
+*:after{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --p-white: #f0f0f0;
+    --p-red: #be3144;
+    --p-blue: #45567d;
+    --p-gray: #303841;
+}
+
+body{
+   font-family: 'Gill Sans', 'Gill Sans MT', Verdana, sans-serif, Verdana, sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+nav{
+  width: 100%;
+}
+#navbar{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+   background-color: var(--p-red);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+li{
+  display: inline;
+}
+
+li a{
+  float: right;
+  color: var(--p-white);
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 25px 17px;
+}
+
+li a:hover{
+  background-color: var(--p-blue);
+}
+
+#welcome-section{
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+h1{
+  text-align: center;
+  font-size: 4rem;
+  color: var(--p-white);
+  margin-bottom: 15px;
+  margin-top: 40vh;
+}
+
+#h1tag{
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: italic;
+  color: var(--p-red);
+  font-weight: 300;
+}
+
+#projects{
+  width: 100%;
+  background-color: var(--p-blue);
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+#projects h2{
+  text-align: center;
+  color: var(--p-white);
+  margin-bottom: 7px;
+  font-size: 3rem;
+}
+
+#projects hr{
+  border-top: 1px solid var(--p-white);
+  width: 730px;
+  margin: 0 auto;
+}
+
+#projects .important{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-top: 50px !important;
+  padding: 100px 20px 20px 20px;
+  margin-bottom: 30px;
+}
+
+#projects img{
+  width: 100%;
+  height: calc((100vw / 3) - 90px);
+  object-fit: cover;
+}
+
+#projects .project-tile {
+  background-color: var(--p-gray);
+  padding: 2px;
+  text-decoration: none;
+  color: var(--p-white);
+  box-shadow: 3px 3px var(--p-gray);
+}
+
+#projects a p{
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+
+#projects .project-tile span{
+  color: var(--p-red);
+  margin: 0px 10px;
+  display: none;
+}
+
+#projects .project-tile:hover span{
+  display: inline;
+}
+
+.btn{
+  width: 8rem;
+  margin: 0 auto;
+  background-color: var(--p-gray);
+  padding: 0.8rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--p-white);
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-shadow: 1px 1px black;
+}
+
+.btn:hover{
+  background-color: var(--p-red);
+  transition: 0.5s;
+  text-shadow: none;
+}
+
+.btn i{
+  position: relative;
+  top: 2.3px;
+}
+
+.btn:hover i{
+  position: relative;
+  left: 3px;
+ }
+
+.btn-div{
+  margin: 0 auto;
+  width: 8rem;
+  cursor: pointer;
+}
+
+#contact-info{
+  height: auto;
+  background-color: var(--p-gray);
+  padding: 1px;
+  padding-bottom: 15vh;
+}
+
+#contact-info h2{
+  color: var(--p-white);
+  text-align: center;
+  font-size: 3.5rem;
+  margin-top: 15vh;
+  margin-bottom: 5px;
+}
+
+.conc-tag{
+  text-align: center;
+  color: var(--p-white);
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  font-family: 'Courier New';
+  margin-bottom: 50px; 
+}
+
+#links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+#links a{
+  color: var(--p-white);
+  font-size: 1.5rem;
+  text-shadow: 1.5px 1.5px black;
+}
+
+#links a:hover{
+  transform: translateY(0.5rem);
+  transition: 0.5s ease-in-out;
+}
+
+footer{
+  padding: 50px 40px;
+  background-color: var(--p-gray);
+  border-top: 3px solid var(--p-red);
+  color: var(--p-white);
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer p{
+  width: 40%
+}
+
+@media screen and (max-width: 760px){
+  #projects .important{
+    grid-template-columns: 1fr 1fr
+  }
+
+  #projects img{
+  width: 100%;
+  height: calc((100vw / 2) - 90px);
+  object-fit: cover;
+}
+
+  #projects h2{
+    font-size: 2.5rem;
+  }
+
+  #projects hr{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  #projects .important{
+    grid-template-columns: 1fr
+  }
+
+  #projects img{
+  width: 100%;
+  height: calc((100vw / 1) - 90px);
+  object-fit: cover;
+}
+
+  #projects h2{
+    font-size: 2.5rem;
+  }
+
+  #projects hr{
+    width: 90%;
+  }
+
+ ul{
+   float: right;
+   text-align: center;
+ }
+
+ li{
+  display: inline;
+}
+
+li a{
+  float: right;
+  color: var(--p-white);
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 5px 17px;
+  width: 100%;
+}
+}
